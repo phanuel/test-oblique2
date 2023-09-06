@@ -1,0 +1,27 @@
+<form [formGroup]="profileForm" class="ob-form-sm">
+	<label>Example Form</label>
+	<mat-form-field>
+		<mat-label>First name</mat-label>
+		<input matInput formControlName="firstName" type="text" />
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Last name</mat-label>
+		<input matInput formControlName="lastName" type="text"/>
+	</mat-form-field>
+	<button type="submit" mat-button obButton="primary">Save</button>
+	<button type="reset" mat-button obButton="secondary">Cancel</button>
+</form>
+<br />
+<mat-tab-group>
+	<mat-tab label="First"> Content 1 </mat-tab>
+	<mat-tab label="Second"> Content 2 </mat-tab>
+	<mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+<br />
+<mat-progress-bar mode="indeterminate" [color]="color"></mat-progress-bar>
+<br />
+<ob-alert [type]="type.value" [hasRoleAlert]="roleAlertControl.value">This is an alert of type: {{ type.value }}
+	<p *ngIf="roleAlertControl.value === true">and it has a aria-live-region role with the value "alert"</p>
+</ob-alert>
+<br />
+<ob-spinner [channel]="sampleChannel"></ob-spinner>
